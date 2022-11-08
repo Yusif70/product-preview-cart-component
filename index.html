@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+    .attribution { font-size: 11px; text-align: center;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      margin:0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Montserrat';
+      background-color: hsl(30, 38%, 92%);
+    }
+    .container{
+      width: 530px;
+      height: 400px;
+      display: flex;
+      background-color: hsl(0, 0%, 100%);
+      margin-bottom: 60px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .info{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      row-gap:25px;
+      align-items: left;
+      margin: 20px 25px 0 25px;
+    }
+    h1{
+      color: hsl(212, 21%, 14%);
+      font-family: 'Fraunces';
+      margin-block: 0;
+      margin-right: 31px;
+      font-size: 1.7em;
+      line-height:29px;
+    }
+    p{
+      color:hsl(228, 12%, 48%);
+      margin:0 23px 0 0;
+      font-size: 0.75em;
+      line-height: 20px;
+    }
+    img{
+      width: 50%;
+    }
+    .price{
+      display: flex;
+      align-items: center;
+    }
+    .discount{
+      color:hsl(158, 36%, 37%);
+      margin-right: 20px;
+    }
+    .price p{
+      text-decoration: line-through;
+    }
+    button{
+      width: 100%;
+      color:hsl(0, 0%, 100%);
+      background-color: hsl(158, 36%, 37%);
+      border:1px solid transparent;
+      padding-block: 14px;
+      font-size: 0.8em;
+      font-weight: 600;
+      border-radius: 7px;
+    }
+    @media(max-width:530px){
+      body{
+        min-height: 120vh;
+      }
+      .container{
+        flex-direction: column;
+        width: 350px;
+        height: 590px;
+        /* flex-wrap: wrap; */
+        /* margin-inline:20px; */
+        margin-top: 10px;
+      }
+      img{
+      width: 100%;
+      height: 40%;
+      object-fit: cover;
+      }
+      .info{
+        margin: 20px 20px 0 20px;
+        height: 60%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/image-product-desktop.jpg" alt="">
+    <div class="info">
+      <p>
+        PERFUME
+      </p>
+      <h1>Gabrielle Essence Eau De Parfum</h1>
+      <p>
+        A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+      Perfumer-Creator for the House of CHANEL.
+      </p>
+      
+      <div class="price">
+        <h1 class="discount">
+          $149.99
+        </h1>
+        <p>$169.99</p>
+      </div>
+      
+      <button> <i class="fa-solid fa-cart-shopping"></i>
+        Add to Cart
+      </button>
+      
+    </div>
+  </div>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Yusif70">Yusif70</a>.
+  </footer>
+</body>
+</html>
